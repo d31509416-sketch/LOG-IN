@@ -10,7 +10,7 @@ import {
 } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-auth.js";
 
 // Replace this with your published Google Sites HOME URL.
-const HOME_URL = "PASTE_GOOGLE_SITES_HOME_URL";
+const HOME_URL = "https://sites.google.com/view/luxevo-customization/products";
 
 const guest = document.getElementById("guest");
 const member = document.getElementById("member");
