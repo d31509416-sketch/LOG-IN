@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LUXEVO | Account</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: #080810;
+      color: white;
+      font-family: Arial, sans-serif;
+      display: grid;
+      place-items: center;
+    }
+    .panel {
+      width: min(420px, 92vw);
+      padding: 36px;
+      background: #141421;
+      border: 1px solid #39305a;
+      border-radius: 20px;
+      box-shadow: 0 0 40px #6833b322;
+    }
+    h1 { text-align: center; letter-spacing: 4px; }
+    p { text-align: center; color: #bcb6cc; }
+    input, button {
+      width: 100%;
+      padding: 14px;
+      margin-top: 12px;
+      border-radius: 9px;
+      font-size: 15px;
+    }
+    input {
+      color: white;
+      background: #202031;
+      border: 1px solid #49425c;
+    }
+    button {
+      border: none;
+      background: #8754ed;
+      color: white;
+      cursor: pointer;
+    }
+    .link {
+      background: transparent;
+      color: #c5a7ff;
+    }
+    #message { min-height: 24px; }
+  </style>
+</head>
+<body>
+  <main class="panel">
+    <h1>LUXEVO</h1>
+    <p>INFINITE POSSIBILITIES</p>
+
+    <section id="guest">
+      <h2 id="heading">Log In</h2>
+      <form id="authForm">
+        <input id="email" type="email"
+               placeholder="Email address"
+               autocomplete="email" required>
+        <input id="password" type="password"
+               placeholder="Password"
+               autocomplete="current-password"
+               minlength="6" required>
+        <button id="submitBtn" type="submit">Log In</button>
+      </form>
+      <button class="link" id="toggleBtn">
+        Create an account
+      </button>
+      <button class="link" id="resetBtn">
+        Forgot password?
+      </button>
+    </section>
+
+    <section id="member" hidden>
+      <p id="welcome"></p>
+      <button id="homeBtn">Return to HOME</button>
+      <button id="logoutBtn">Log Out</button>
+    </section>
+
+    <p id="message" role="status" aria-live="polite"></p>
+  </main>
+
+  <script type="module" src="./auth.js"></script>
+</body>
+</html>
